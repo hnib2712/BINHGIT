@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="yb_masterlistModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="masterlist">
+          <Key>
+            <PropertyRef Name="Indent" />
+          </Key>
+          <Property Name="ID" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="TITLE" Type="nvarchar(max)" />
+          <Property Name="ARTIST" Type="nvarchar(max)" />
+          <Property Name="ALBUM" Type="nvarchar(max)" />
+          <Property Name="LABEL" Type="nvarchar(max)" />
+          <Property Name="ISRC" Type="nvarchar(max)" />
+          <Property Name="COMP_ID" Type="nvarchar(max)" />
+          <Property Name="COMP_TITLE" Type="nvarchar(max)" />
+          <Property Name="COMP_ISWC" Type="nvarchar(max)" />
+          <Property Name="COMP_WRITERS" Type="nvarchar(max)" />
+          <Property Name="COMP_CUSTOM_ID" Type="nvarchar(max)" />
+          <Property Name="QUANTILE" Type="nvarchar" MaxLength="500" />
+          <Property Name="Indent" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="yb_masterlistModelStoreContainer">
+          <EntitySet Name="masterlist" EntityType="Self.masterlist" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="yb_masterlistModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="masterlist">
+          <Key>
+            <PropertyRef Name="Indent" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TITLE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ARTIST" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ALBUM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LABEL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ISRC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="COMP_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="COMP_TITLE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="COMP_ISWC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="COMP_WRITERS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="COMP_CUSTOM_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="QUANTILE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Indent" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityContainer Name="yb_masterlistEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="masterlists" EntityType="Self.masterlist" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="yb_masterlistModelStoreContainer" CdmEntityContainer="yb_masterlistEntities">
+          <EntitySetMapping Name="masterlists">
+            <EntityTypeMapping TypeName="yb_masterlistModel.masterlist">
+              <MappingFragment StoreEntitySet="masterlist">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+                <ScalarProperty Name="ARTIST" ColumnName="ARTIST" />
+                <ScalarProperty Name="ALBUM" ColumnName="ALBUM" />
+                <ScalarProperty Name="LABEL" ColumnName="LABEL" />
+                <ScalarProperty Name="ISRC" ColumnName="ISRC" />
+                <ScalarProperty Name="COMP_ID" ColumnName="COMP_ID" />
+                <ScalarProperty Name="COMP_TITLE" ColumnName="COMP_TITLE" />
+                <ScalarProperty Name="COMP_ISWC" ColumnName="COMP_ISWC" />
+                <ScalarProperty Name="COMP_WRITERS" ColumnName="COMP_WRITERS" />
+                <ScalarProperty Name="COMP_CUSTOM_ID" ColumnName="COMP_CUSTOM_ID" />
+                <ScalarProperty Name="QUANTILE" ColumnName="QUANTILE" />
+                <ScalarProperty Name="Indent" ColumnName="Indent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

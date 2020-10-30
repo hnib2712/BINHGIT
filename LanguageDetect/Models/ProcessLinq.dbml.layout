@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ProcessLinq">
+  <DataContextMoniker Name="/ProcessLinqDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5bf8d308-e429-499a-bf5c-b4fa414f9017" absoluteBounds="2.5, 2, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/ProcessLinqDataContext/masterlist" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e784dce7-59aa-482c-a5ba-ecfca9de57ae" absoluteBounds="2.515, 2.46, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

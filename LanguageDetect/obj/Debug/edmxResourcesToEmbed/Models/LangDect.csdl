@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="yb_masterlistModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="masterlist">
+    <Key>
+      <PropertyRef Name="Indent" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TITLE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ARTIST" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ALBUM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LABEL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ISRC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="COMP_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="COMP_TITLE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="COMP_ISWC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="COMP_WRITERS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="COMP_CUSTOM_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="QUANTILE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Indent" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityContainer Name="yb_masterlistEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="masterlists" EntityType="Self.masterlist" />
+  </EntityContainer>
+</Schema>

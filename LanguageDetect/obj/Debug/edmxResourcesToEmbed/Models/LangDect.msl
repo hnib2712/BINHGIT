@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="yb_masterlistModelStoreContainer" CdmEntityContainer="yb_masterlistEntities">
+    <EntitySetMapping Name="masterlists">
+      <EntityTypeMapping TypeName="yb_masterlistModel.masterlist">
+        <MappingFragment StoreEntitySet="masterlist">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="ARTIST" ColumnName="ARTIST" />
+          <ScalarProperty Name="ALBUM" ColumnName="ALBUM" />
+          <ScalarProperty Name="LABEL" ColumnName="LABEL" />
+          <ScalarProperty Name="ISRC" ColumnName="ISRC" />
+          <ScalarProperty Name="COMP_ID" ColumnName="COMP_ID" />
+          <ScalarProperty Name="COMP_TITLE" ColumnName="COMP_TITLE" />
+          <ScalarProperty Name="COMP_ISWC" ColumnName="COMP_ISWC" />
+          <ScalarProperty Name="COMP_WRITERS" ColumnName="COMP_WRITERS" />
+          <ScalarProperty Name="COMP_CUSTOM_ID" ColumnName="COMP_CUSTOM_ID" />
+          <ScalarProperty Name="QUANTILE" ColumnName="QUANTILE" />
+          <ScalarProperty Name="Indent" ColumnName="Indent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="yb_masterlist" Class="ProcessLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=BINHVT\BINH2016;Initial Catalog=yb_masterlist;Integrated Security=True" SettingsObjectName="LanguageDetect.Properties.Settings" SettingsPropertyName="yb_masterlistConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.masterlist" Member="masterlists">
+    <Type Name="masterlist">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="TITLE" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ARTIST" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ALBUM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LABEL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ISRC" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="COMP_ID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="COMP_TITLE" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="COMP_ISWC" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="COMP_WRITERS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="COMP_CUSTOM_ID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="QUANTILE" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Indent" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LangVi" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
